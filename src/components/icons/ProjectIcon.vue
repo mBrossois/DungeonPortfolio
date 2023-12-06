@@ -1,0 +1,25 @@
+<template>
+    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="17" y="4" width="55" height="78" rx="4" fill="white"/>
+        <rect x="32" width="24" height="9" rx="2" fill="#60584C"/>
+        <path d="M33 19H60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M33 31H60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M33 43H60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M33 55H60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M33 67H60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M23 17.7539L24 18.7539L26.7539 16" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M23 29.5078L24 30.5078L26.7539 27.7539" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M23 41.2617L24 42.2617L26.7539 39.5078" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M23 53.0156L24 54.0156L26.7539 51.2617" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M23 64.7695L24 65.7695L26.7539 63.0156" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M69 87C78.9411 87 87 78.9411 87 69C87 59.0589 78.9411 51 69 51C59.0589 51 51 59.0589 51 69C51 78.9411 59.0589 87 69 87ZM69 76C72.866 76 76 72.866 76 69C76 65.134 72.866 62 69 62C65.134 62 62 65.134 62 69C62 72.866 65.134 76 69 76Z" fill="#9A8470"/>
+        <rect x="84" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
+        <rect x="48" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
+        <rect x="66" y="84" width="6" height="6" rx="1" fill="#9A8470"/>
+        <rect x="56.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 56.2427 78)" fill="#9A8470"/>
+        <rect x="81.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 81.2427 78)" fill="#9A8470"/>
+        <rect x="81.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 81.2427 52)" fill="#9A8470"/>
+        <rect x="56.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 56.2427 52)" fill="#9A8470"/>
+        <rect x="66" y="48" width="6" height="6" rx="1" fill="#9A8470"/>
+    </svg>
+</template>

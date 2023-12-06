@@ -1,0 +1,47 @@
+@font-face {
+  font-family: MarckScript;
+  src: url(assets/fonts/MarckScript-Regular.ttf);
+}
+
+.light-version {
+  --background-color: #FFFFFF;
+  --nav-background-color: #D9D9D9;
+  --color-1: #60584C:
+}
+
+.dark-version {
+
+}
+
+.real-experience {
+  font-family: MarckScript;
+}
+
+.real-experience button{
+  font-family: MarckScript;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 1rem 0;
+
+}
+
+.page {
+  max-width: 1028px;
+  padding: 3rem 1rem;
+}
