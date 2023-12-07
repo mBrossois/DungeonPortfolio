@@ -13,3 +13,26 @@
     </svg>
 
 </template>
+
+<style scoped>
+svg {
+    cursor: pointer;
+}
+
+rect {
+    transition: transform 200ms ease-in;
+}
+
+g > rect:nth-child(1) {
+    transition: transform 300ms ease-in;
+}
+
+svg:hover > g > rect:nth-child(1) {
+    transform: translateY(16px);
+}
+
+svg:hover > g > rect:nth-child(2) {
+    transform: translateY(9px);
+}
+
+</style>

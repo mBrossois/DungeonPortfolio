@@ -23,7 +23,6 @@ button {
 
 button:hover {
     cursor: pointer;
-
     outline: 2px solid black;
 }
 
