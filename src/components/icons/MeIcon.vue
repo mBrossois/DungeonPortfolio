@@ -1,7 +1,7 @@
 <template>
     <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M75 45C75 68.7482 67.9366 88 45.5 88C23.0634 88 16 68.7482 16 45C16 21.2518 29.2076 2 45.5 2C61.7924 2 75 21.2518 75 45Z" fill="#FFD057"/>
-        <rect x="28" y="44" width="12" height="13" rx="4" fill="#BBD6FF" stroke="#FF8F5F" stroke-width="2"/>
+        <rect class="right-eye" x="28" y="44" width="12" height="13" rx="4" fill="#BBD6FF" stroke="#FF8F5F" stroke-width="2"/>
         <rect x="50" y="44" width="13" height="13" rx="4" fill="#BBD6FF" stroke="#FF8F5F" stroke-width="2"/>
         <line x1="41" y1="50" x2="49" y2="50" stroke="#FF8F5F" stroke-width="2"/>
         <path d="M72.696 26.6351C72.696 31.5892 77.2731 32.2302 73.5248 35.7112C68.9654 39.9454 56.1986 37.0078 48.6629 37.0078C41.6538 37.0078 33.7073 33.3918 29.1878 29.6605C24.8537 26.0822 18 34.6034 18 29.2283C18 18.2483 30.3741 2 44.1049 2C57.8357 2 72.696 15.6552 72.696 26.6351Z" fill="#A4633E"/>
@@ -14,3 +14,25 @@
     </svg>
 
 </template>
+
+<style scoped>
+.right-eye {
+    transition: all 200ms ease-in-out;
+}
+
+button:hover svg > .right-eye {
+    animation: wink 200ms both 2 alternate;
+}
+
+
+@keyframes wink {
+    from {
+        y: 44px;
+        height: 13px;
+    } to {
+        height: 2px;
+        y: 49px;
+    }
+}
+
+</style>

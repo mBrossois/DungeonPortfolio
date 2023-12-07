@@ -32,10 +32,18 @@
     .logo.container {
         display: flex;
         align-items: center;
+
+        cursor: pointer;
     }
 
-    .logo.container > svg {
+    .logo.container {
+        --logo-rotation: 0deg;
         margin-right: 1rem;
+    }
+
+    .logo.container:hover {
+        --logo-rotation: 5deg;
+
     }
 
     .leafs.icon {

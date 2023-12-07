@@ -12,14 +12,36 @@
         <path d="M23 41.2617L24 42.2617L26.7539 39.5078" stroke="black" stroke-width="2" stroke-linecap="round"/>
         <path d="M23 53.0156L24 54.0156L26.7539 51.2617" stroke="black" stroke-width="2" stroke-linecap="round"/>
         <path d="M23 64.7695L24 65.7695L26.7539 63.0156" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M69 87C78.9411 87 87 78.9411 87 69C87 59.0589 78.9411 51 69 51C59.0589 51 51 59.0589 51 69C51 78.9411 59.0589 87 69 87ZM69 76C72.866 76 76 72.866 76 69C76 65.134 72.866 62 69 62C65.134 62 62 65.134 62 69C62 72.866 65.134 76 69 76Z" fill="#9A8470"/>
-        <rect x="84" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
-        <rect x="48" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
-        <rect x="66" y="84" width="6" height="6" rx="1" fill="#9A8470"/>
-        <rect x="56.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 56.2427 78)" fill="#9A8470"/>
-        <rect x="81.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 81.2427 78)" fill="#9A8470"/>
-        <rect x="81.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 81.2427 52)" fill="#9A8470"/>
-        <rect x="56.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 56.2427 52)" fill="#9A8470"/>
-        <rect x="66" y="48" width="6" height="6" rx="1" fill="#9A8470"/>
+        <g class="clank">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M69 87C78.9411 87 87 78.9411 87 69C87 59.0589 78.9411 51 69 51C59.0589 51 51 59.0589 51 69C51 78.9411 59.0589 87 69 87ZM69 76C72.866 76 76 72.866 76 69C76 65.134 72.866 62 69 62C65.134 62 62 65.134 62 69C62 72.866 65.134 76 69 76Z" fill="#9A8470"/>
+            <rect x="84" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
+            <rect x="48" y="66" width="6" height="6" rx="1" fill="#9A8470"/>
+            <rect x="66" y="84" width="6" height="6" rx="1" fill="#9A8470"/>
+            <rect x="56.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 56.2427 78)" fill="#9A8470"/>
+            <rect x="81.2427" y="78" width="6" height="6" rx="1" transform="rotate(45 81.2427 78)" fill="#9A8470"/>
+            <rect x="81.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 81.2427 52)" fill="#9A8470"/>
+            <rect x="56.2427" y="52" width="6" height="6" rx="1" transform="rotate(45 56.2427 52)" fill="#9A8470"/>
+            <rect x="66" y="48" width="6" height="6" rx="1" fill="#9A8470"/>
+        </g>
     </svg>
 </template>
+
+<style scoped>
+.clank {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(0deg);
+}
+
+button:hover svg > .clank {
+    animation: rotation 2s ease-in-out alternate infinite;
+}
+
+@keyframes rotation {
+    0%, 35% {
+        transform: rotate(0deg);
+    } 65%, 100% {
+        transform: rotate(180deg);
+    }
+}
+</style>

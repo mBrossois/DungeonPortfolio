@@ -6,6 +6,7 @@
 .light-version {
   --background-color: #FFFFFF;
   --nav-background-color: #D9D9D9;
+  --text-color: #000000;
   --color-1: #60584C:
 }
 
@@ -17,10 +18,11 @@
   font-family: MarckScript;
 }
 
-.real-experience button{
+.real-experience button {
   font-family: MarckScript;
 
 }
+
 * {
   box-sizing: border-box;
 }
@@ -44,4 +46,8 @@ h2 {
 .page {
   max-width: 1028px;
   padding: 3rem 1rem;
+}
+
+h1, h2, p, span, button {
+  color: --text-color;
 }
