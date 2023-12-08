@@ -16,23 +16,22 @@
 </template>
 
 <style scoped>
-.right-eye {
-    transition: all 200ms ease-in-out;
-}
-
-button:hover svg > .right-eye {
-    animation: wink 200ms both 2 alternate;
-}
-
-
-@keyframes wink {
-    from {
-        y: 44px;
-        height: 13px;
-    } to {
-        height: 2px;
-        y: 49px;
+    .right-eye {
+        transition: all 200ms ease-in-out;
     }
-}
 
+    button:hover svg > .right-eye {
+        animation: wink 200ms both 2 alternate;
+    }
+
+
+    @keyframes wink {
+        from {
+            y: 44px;
+            height: 13px;
+        } to {
+            height: 2px;
+            y: 49px;
+        }
+    }
 </style>

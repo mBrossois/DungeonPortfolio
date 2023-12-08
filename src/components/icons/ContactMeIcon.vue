@@ -19,15 +19,15 @@
 </template>
 
 <style scoped>
-.envelope-top {
-    transform-box: fill-box;
-    transform-origin: top;
-    transition: transform 300ms ease-in-out;
-    transform: rotateX(90deg) translateY(-1px);
+    .envelope-top {
+        transform-box: fill-box;
+        transform-origin: top;
+        transition: transform 300ms ease-in-out;
+        transform: rotateX(90deg) translateY(-1px);
 
-}
+    }
 
-button:hover svg g > .envelope-top {
-    transform: rotateX(180deg) translateY(-2px);
-}
+    button:hover svg g > .envelope-top {
+        transform: rotateX(180deg) translateY(-2px);
+    }
 </style>

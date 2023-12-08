@@ -27,21 +27,21 @@
 </template>
 
 <style scoped>
-.clank {
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: rotate(0deg);
-}
-
-button:hover svg > .clank {
-    animation: rotation 2s ease-in-out alternate infinite;
-}
-
-@keyframes rotation {
-    0%, 35% {
+    .clank {
+        transform-box: fill-box;
+        transform-origin: center;
         transform: rotate(0deg);
-    } 65%, 100% {
-        transform: rotate(180deg);
     }
-}
+
+    button:hover svg > .clank {
+        animation: rotation 2s ease-in-out alternate infinite;
+    }
+
+    @keyframes rotation {
+        0%, 35% {
+            transform: rotate(0deg);
+        } 65%, 100% {
+            transform: rotate(180deg);
+        }
+    }
 </style>

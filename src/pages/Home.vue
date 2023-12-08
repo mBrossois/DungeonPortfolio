@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <h2 class="first-title">Explanation</h2>
+        <h1 class="first-title">Explanation</h1>
         <p>
             This portfolio is a bit different then your normal one.
             To read the information on the page, you have to be brave enough to enter the dungeons and defeat the monsters they contain!
@@ -9,13 +9,13 @@
             Be careful with the order you choose, since after you finish a dungeon the other ones become more difficult.
         </p>
 
-        <h2>Who am I?</h2>
+        <h1>Who am I?</h1>
         <p>
             I am the Creator of this dungeon. To get more information about me, you have to clear the dungeons.
         </p>
 
 
-        <h2>Explore the dungeons</h2>
+        <h1>Explore the dungeons</h1>
         <div class="buttons grid">
             <Button>
                 <template #title><span> Projects </span></template>
@@ -50,7 +50,8 @@ import ContactMeIcon from '../components/icons/ContactMeIcon.vue'
         margin-top: 0;
     }
 
-    h2 {
+    h1 {
+        margin: 1rem 0;
         margin-bottom: 1rem;
     }
 
@@ -63,9 +64,27 @@ import ContactMeIcon from '../components/icons/ContactMeIcon.vue'
     }
     .grid { 
         display: grid;
-        grid-template-columns: 8.125rem 8.125rem;
-        grid-template-rows: 8.125rem 8.125rem;
+        grid-template-columns: repeat(auto-fill, 8.125rem);;
         gap: 1rem;
     }
 
+    button > span {
+        color: var(--text-color);
+    }
+
+    /* Medium sized screens */
+    @media screen and (min-width: 481px) {
+        .grid {
+            grid-template-columns: repeat(auto-fill, 16.25rem);
+        }
+
+        button > span {
+            font-size: 20px;
+        }
+
+        button > svg {
+            height: 180px;
+            width: 180px;
+        }
+    }
 </style>

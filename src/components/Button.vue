@@ -6,28 +6,38 @@
 </template>
 
 <style scoped>
-button {
-    width: 8.125rem;
-    height: 8.125rem;
+    button {
+        width: 8.125rem;
+        height: 8.125rem;
 
-    background-color: #D9D9D9;
-    padding: .5rem;
-    padding-bottom: .28rem;
-    border: none;
+        background-color: #D9D9D9;
+        padding: .5rem;
+        padding-bottom: .28rem;
+        border: none;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-button:hover {
-    cursor: pointer;
-    outline: 2px solid black;
-}
+    button:hover {
+        cursor: pointer;
+        outline: 2px solid var(--text-color);
+    }
 
-.icon {
-    height: 5.625rem;
-    width: 5.625rem;
-}
+    .icon {
+        height: 5.625rem;
+        width: 5.625rem;
+    }
+
+    /* Medium sized screens */
+    @media screen and (min-width: 481px) {
+        button {
+            width: 16.25rem;
+            height: 16.25rem;
+            padding: 1rem;
+
+        }
+    }
 </style>
