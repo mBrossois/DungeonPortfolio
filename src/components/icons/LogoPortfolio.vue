@@ -21,20 +21,20 @@
 </template>
 
 <style>
-svg {
-    overflow: visible;
-}
+    svg {
+        overflow: visible;
+    }
 
-.sword, .staff {
-    transition: all 200ms ease-in-out;
-    transform-origin: center;
-}
+    .sword, .staff {
+        transition: all 200ms ease-in-out;
+        transform-origin: center;
+    }
 
-.sword {
-    transform: rotate(var(--logo-rotation));
-}
+    .sword {
+        transform: rotate(var(--logo-rotation));
+    }
 
-.staff {
-    transform: rotate(calc( -1 * var(--logo-rotation)));
-}
+    .staff {
+        transform: rotate(calc( -1 * var(--logo-rotation)));
+    }
 </style>

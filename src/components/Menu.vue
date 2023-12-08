@@ -3,7 +3,7 @@
         <div class="logo container">
             <LogoPortfolio />
 
-            <h1>Dungeon portfolio</h1>
+            <p id="logo-text">Dungeon portfolio</p>
         </div>
 
         <HamburgerIcon />
@@ -50,4 +50,28 @@
         position: absolute;
         right: 0;
     }
+
+    #logo-text {
+        margin-left: 1rem;
+        font-size: 24px;
+    }
+
+    /* Medium sized screens */
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+        header {
+            padding: 0 2rem;
+
+        }
+
+    }
+
+    /* Big sized screens */
+    @media screen and (min-width: 1025px) {
+        header {
+            padding: 0 4rem;
+
+        }
+
+    }
+
 </style>

@@ -21,19 +21,19 @@
 </template>
 
 <style>
-.wrench, .pencil {
-    transform-origin: center;
-    transform-box: fill-box;
-    transition: transform 200ms ease-in-out;
-}
+    .wrench, .pencil {
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: transform 200ms ease-in-out;
+    }
 
-button:hover svg > .wrench {
-    transform: rotate(10deg);
+    button:hover svg > .wrench {
+        transform: rotate(10deg);
 
-}
+    }
 
-button:hover svg > .pencil {
-    transform: rotate(-10deg);
+    button:hover svg > .pencil {
+        transform: rotate(-10deg);
 
-}
+    }
 </style>
