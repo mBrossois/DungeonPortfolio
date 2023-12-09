@@ -1,77 +1,99 @@
 <template>
-    <header>
-        <div class="logo container">
-            <LogoPortfolio />
+    <div class="container">
+        <div class="content">
+            <div class="switches">
+                <div class="dark-light-mode">               
+                    <SunIcon></SunIcon>
+                    <Switch></Switch>
+                    <MoonIcon></MoonIcon>
+                </div>
+                <div class="accessibility-mode">               
+                    <BookIcon></BookIcon>
+                    <Switch></Switch>
+                    <AccessibilityIcon></AccessibilityIcon>
+                </div>
+            </div>
 
-            <p id="logo-text">Dungeon portfolio</p>
+            <nav>
+                <button>Projects</button>
+                <button>Skill set</button>
+                <button>About me</button>
+                <button>Contact me</button>
+            </nav>
         </div>
-
-        <HamburgerIcon />
-    </header>
-
-    <LeafsIcon class="leafs icon" />
+        <div class="background">
+            <div v-for="index in 20" :style="`--bottom: ${index - 1}`" class="stone"></div>
+        </div>
+    </div>
 </template>
 
 <script setup>
-    import LogoPortfolio from './icons/LogoPortfolio.vue';
-    import HamburgerIcon from './icons/HamburgerIcon.vue';
-    import LeafsIcon from './icons/LeafsIcon.vue'
+import SunIcon from './icons/SunIcon.vue';
+import MoonIcon from './icons/MoonIcon.vue';
+import BookIcon from './icons/BookIcon.vue';
+import AccessibilityIcon from './icons/AccessibilityIcon.vue';
+import Switch from './Switch.vue';
+    
 </script>
 
 <style scoped>
-    header {
-        height: 7rem;
-        background-color: var(--nav-background-color);
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 1rem;
+    .container {
+        height: 100dvh;
+        position: absolute;
+        overflow: hidden;
     }
 
-    .logo.container {
-        display: flex;
-        align-items: center;
-
-        cursor: pointer;
+    .content {
+        position: relative;
+        z-index: 250;
+        width: 100dvw;
     }
 
-    .logo.container {
-        --logo-rotation: 0deg;
+    .switches {
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+
+    .switches > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .switches > div > :not(:last-child) {
         margin-right: 1rem;
     }
 
-    .logo.container:hover {
-        --logo-rotation: 5deg;
-
+    .switches .dark-light-mode {
+        padding-bottom: 1rem;
     }
 
-    .leafs.icon {
-        position: absolute;
-        right: 0;
+    .switches .accessibility-mode {
+        padding-bottom: 10rem;
     }
 
-    #logo-text {
-        margin-left: 1rem;
-        font-size: 24px;
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        margin: 0 auto;
+        width: fit-content;
     }
 
-    /* Medium sized screens */
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
-        header {
-            padding: 0 2rem;
-
-        }
-
+    nav > button {
+        color: var(--text-color);
+        border: none;
+        background-color: unset;
+        font-size: 36px;
     }
 
-    /* Big sized screens */
-    @media screen and (min-width: 1025px) {
-        header {
-            padding: 0 4rem;
-
-        }
-
+    .stone {
+        width: 100dvw;
+        height: 5dvh;
+        background-color: var(--menu-background);
+        position: fixed;
+        bottom: calc(5dvh * var(--bottom));
+        border-radius: 2px;
+        z-index: 100;
     }
-
 </style>

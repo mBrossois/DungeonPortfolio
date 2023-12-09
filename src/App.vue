@@ -1,11 +1,11 @@
 <script setup>
-  import Menu from './components/Menu.vue';
+  import MenuBar from './components/MenuBar.vue';
   import Home from './pages/Home.vue';
 </script>
 
 <template>
   <div class="light-version real-experience">
-    <Menu></Menu>
+    <MenuBar></MenuBar>
     <Home></Home>
   </div>
 </template>

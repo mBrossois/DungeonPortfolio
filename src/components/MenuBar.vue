@@ -1,25 +1,29 @@
 <template>
     <header>
-        <div class="logo container">
+        <div tabindex="0" class="logo container">
             <LogoPortfolio />
 
             <p id="logo-text">Dungeon portfolio</p>
         </div>
 
-        <HamburgerIcon />
+        <HamburgerIcon tabindex="0" />
     </header>
 
     <LeafsIcon class="leafs icon" />
+
+    <Menu></Menu>
 </template>
 
 <script setup>
     import LogoPortfolio from './icons/LogoPortfolio.vue';
     import HamburgerIcon from './icons/HamburgerIcon.vue';
     import LeafsIcon from './icons/LeafsIcon.vue'
+    import Menu from './Menu.vue';
 </script>
 
 <style scoped>
     header {
+        position: relative;
         height: 7rem;
         background-color: var(--nav-background-color);
 
@@ -27,6 +31,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 1rem;
+        z-index: 500;
     }
 
     .logo.container {
@@ -49,6 +54,7 @@
     .leafs.icon {
         position: absolute;
         right: 0;
+        z-index: 1000;
     }
 
     #logo-text {
