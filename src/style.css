@@ -52,6 +52,17 @@ h1, h2, p, span, button {
   color: --text-color;
 }
 
+/* Styling for js generated span letters */
+.letter {
+  transition: 500ms ease-in-out;
+  opacity: 0;
+}
+
+.container.open .content nav button > span.letter {
+    opacity: 1;
+    transition-delay: calc(var(--letter-delay) * 50ms + 1500ms);
+}
+
 /* Medium sized screens and bigger */
 @media screen and (min-width: 481px) {
   h1 {
