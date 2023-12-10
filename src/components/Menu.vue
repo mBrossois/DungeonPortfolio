@@ -34,7 +34,7 @@ import BookIcon from './icons/BookIcon.vue';
 import AccessibilityIcon from './icons/AccessibilityIcon.vue';
 import Switch from './Switch.vue';
 
-import { defineProps, nextTick, ref } from 'vue';
+import { nextTick, ref } from 'vue';
     
 const props = defineProps({
     isMenuOpen: Boolean
@@ -135,16 +135,19 @@ nextTick(() => {
         border-radius: 2px;
         z-index: 100;
         width: 100dvw;
-        height: 5.1dvh;
+        height: 5.1vh;
         background-color: var(--menu-background);
         position: fixed;
-        bottom: calc(5dvh * var(--item));
-        transform: translateX(100dvw);
-        transition: 200ms ease-in calc(var(--item) * 100ms) ;
+        bottom: calc(5vh * var(--item));
+        transform: translateX(100vw);
+        transition: 200ms ease-in ;
+        transition-delay: calc( (20 - var(--item)) * 100ms) ;
     }
 
     .container.open .background .stone {
         transform: translateX(0);
+        transition-delay: calc( var(--item) * 100ms) ;
+
     }
 
     .container.open .content .switches > div {

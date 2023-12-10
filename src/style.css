@@ -54,7 +54,8 @@ h1, h2, p, span, button {
 
 /* Styling for js generated span letters */
 .letter {
-  transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;    
+  transition-delay: calc(var(--letter-delay) * 50ms);
   opacity: 0;
 }
 
