@@ -32,8 +32,8 @@
   right: 0;
   bottom: 0;
   background-color: var(--color-1);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
   border-radius: 2px;
 }
 
@@ -45,8 +45,8 @@
   left: -.4rem;
   bottom: -.25rem;
   background-color: var(--color-2);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
   border-radius: 2px;
 }
 

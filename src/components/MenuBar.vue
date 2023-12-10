@@ -6,19 +6,26 @@
             <p id="logo-text">Dungeon portfolio</p>
         </div>
 
-        <HamburgerIcon tabindex="0" />
+        <HamburgerIcon :isMenuOpen="isMenuOpen" tabindex="0" @click="toggleMenu"/>
     </header>
 
     <LeafsIcon class="leafs icon" />
 
-    <Menu></Menu>
+    <Menu :isMenuOpen="isMenuOpen"></Menu>
 </template>
 
 <script setup>
-    import LogoPortfolio from './icons/LogoPortfolio.vue';
-    import HamburgerIcon from './icons/HamburgerIcon.vue';
-    import LeafsIcon from './icons/LeafsIcon.vue'
-    import Menu from './Menu.vue';
+import LogoPortfolio from './icons/LogoPortfolio.vue';
+import HamburgerIcon from './icons/HamburgerIcon.vue';
+import LeafsIcon from './icons/LeafsIcon.vue'
+import Menu from './Menu.vue';
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false);
+
+function toggleMenu() {
+    isMenuOpen.value = !isMenuOpen.value;
+}
 </script>
 
 <style scoped>
