@@ -4,12 +4,12 @@
             <div class="switches">
                 <div class="dark-light-mode">               
                     <SunIcon></SunIcon>
-                    <Switch></Switch>
+                    <Switch :is-checked="getisDarkMode" @toggle="toggleDarkMode"></Switch>
                     <MoonIcon></MoonIcon>
                 </div>
                 <div class="accessibility-mode">               
                     <BookIcon></BookIcon>
-                    <Switch></Switch>
+                    <Switch :is-checked="getIsAccessible" @toggle="toggleAccessibilityMode"></Switch>
                     <AccessibilityIcon></AccessibilityIcon>
                 </div>
             </div>
@@ -33,36 +33,51 @@ import MoonIcon from './icons/MoonIcon.vue';
 import BookIcon from './icons/BookIcon.vue';
 import AccessibilityIcon from './icons/AccessibilityIcon.vue';
 import Switch from './Switch.vue';
+import { useGeneralStore } from '../store/index'
 
 import { nextTick, ref } from 'vue';
+
+import { storeToRefs } from 'pinia';
     
 const props = defineProps({
     isMenuOpen: Boolean
 })
 
-const projects = ref();
-const skillSet = ref();
-const aboutMe = ref();
-const contactMe = ref();
+const store = useGeneralStore()
+const { getIsAccessible, getisDarkMode } = storeToRefs(store);
+
+const projects = ref()
+const skillSet = ref()
+const aboutMe = ref()
+const contactMe = ref()
+
+function toggleDarkMode() {
+    store.toggleIsDarkMode();
+}
+
+function toggleAccessibilityMode() {
+    store.toggleIsAccessible();
+}
+
 
 function splitToSpan(element) {
-    const newWord = element.textContent.split('');
-    element.innerText = '';
+    const newWord = element.textContent.split('')
+    element.innerText = ''
 
     for(let i in newWord) {
-        const spanEl = document.createElement('span');
-        spanEl.innerText = newWord[i];
-        spanEl.setAttribute('class', 'letter');
-        spanEl.style.setProperty('--letter-delay', i);
-        element.appendChild(spanEl);
+        const spanEl = document.createElement('span')
+        spanEl.innerText = newWord[i]
+        spanEl.setAttribute('class', 'letter')
+        spanEl.style.setProperty('--letter-delay', i)
+        element.appendChild(spanEl)
     }
 }
 
 nextTick(() => {
-    splitToSpan(projects.value);
-    splitToSpan(skillSet.value);
-    splitToSpan(aboutMe.value);
-    splitToSpan(contactMe.value);
+    splitToSpan(projects.value)
+    splitToSpan(skillSet.value)
+    splitToSpan(aboutMe.value)
+    splitToSpan(contactMe.value)
 })
 </script>
 
@@ -140,7 +155,7 @@ nextTick(() => {
         position: fixed;
         bottom: calc(5vh * var(--item));
         transform: translateX(100vw);
-        transition: 200ms ease-in ;
+        transition: transform 200ms ease-in ;
         transition-delay: calc( (20 - var(--item)) * 100ms) ;
     }
 

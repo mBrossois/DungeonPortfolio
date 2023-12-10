@@ -26,14 +26,14 @@ defineProps({
     }
 
     rect {
-        transition: all 200ms ease-in;
+        transition: fill 200ms ease-in, transform 200ms ease-in;
         fill: #60584C;
         transform-box: fill-box;
         transform-origin: center;
     }
 
     g > rect:nth-child(1) {
-        transition: all 300ms ease-in;
+        transition: fill 300ms ease-in, transform 300ms ease-in;
     }
 
     svg:hover > g:not(.open) > rect:nth-child(1) {
