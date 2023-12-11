@@ -26,7 +26,7 @@
     }
 
     .sword, .staff {
-        transition: all 200ms ease-in-out;
+        transition: transform 200ms ease-in-out;
         transform-origin: center;
     }
 

@@ -16,10 +16,6 @@
 </template>
 
 <style scoped>
-    .right-eye {
-        transition: all 200ms ease-in-out;
-    }
-
     button:hover svg > .right-eye {
         animation: wink 200ms both 2 alternate;
     }

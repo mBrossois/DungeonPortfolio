@@ -1,9 +1,19 @@
 <template>
     <label tabindex="0" class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
+        {{ isChecked }}
+        <input :class="{'isChecked': isChecked}" type="checkbox">
+        <span class="slider" @click="onClick"></span>
     </label>
 </template>
+
+<script setup>
+const emit = defineEmits(['toggle'])
+defineProps({isChecked: Boolean})
+
+function onClick() {
+  emit('toggle')
+}
+</script>
 
 <style>
 /* The switch - the box around the slider */
@@ -54,7 +64,7 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--color-2);
 }
 
-input:checked + .slider:before {
+input.isChecked + .slider:before {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);

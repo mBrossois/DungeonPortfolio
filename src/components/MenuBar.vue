@@ -21,10 +21,10 @@ import LeafsIcon from './icons/LeafsIcon.vue'
 import Menu from './Menu.vue';
 import { ref } from 'vue';
 
-const isMenuOpen = ref(false);
+const isMenuOpen = ref(false)
 
 function toggleMenu() {
-    isMenuOpen.value = !isMenuOpen.value;
+    isMenuOpen.value = !isMenuOpen.value
 }
 </script>
 

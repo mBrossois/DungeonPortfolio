@@ -3,7 +3,7 @@
   src: url(assets/fonts/MarckScript-Regular.ttf);
 }
 
-.light-version {
+.light-mode {
   --background-color: #FFFFFF;
   --nav-background-color: #D9D9D9;
   --text-color: #000000;
@@ -12,15 +12,25 @@
   --menu-background: #FFE8CE;
 }
 
-.dark-version {
+.dark-mode {
+  --background-color: #FFFFFF;
+  --nav-background-color: #000;
+  --text-color: #fff;
+  --color-1: #60584C;
+  --color-2: #A4633E;
+  --menu-background: #FFE8CE;
+}
+
+* {
+  transition: color 350ms ease-in-out, background-color 200ms ease-in-out;
 
 }
 
-.real-experience {
+.real-mode {
   font-family: MarckScript;
 }
 
-.real-experience button {
+.real-mode button {
   font-family: MarckScript;
 
 }
@@ -54,7 +64,8 @@ h1, h2, p, span, button {
 
 /* Styling for js generated span letters */
 .letter {
-  transition: 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;    
+  transition-delay: calc(var(--letter-delay) * 50ms);
   opacity: 0;
 }
 
