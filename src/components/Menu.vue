@@ -85,8 +85,8 @@ nextTick(() => {
     .container {
         height: 100dvh;
         position: absolute;
-        overflow: hidden;
         visibility: hidden;
+        right: 0;
         transition: visibility 0ms 3000ms;
     }
 
@@ -121,16 +121,13 @@ nextTick(() => {
         padding-bottom: 1rem;
     }
 
-    .switches .accessibility-mode {
-        padding-bottom: 10rem;
-    }
-
     nav {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 3rem;
-        margin: 0 auto;
+        margin: 0 auto;        
+        margin-top: 10rem;
         width: fit-content;
     }
 
@@ -168,6 +165,29 @@ nextTick(() => {
     .container.open .content .switches > div {
         opacity: 1;
         transition: opacity 350ms ease 1750ms
+    }
+
+
+    /* Medium sized screens and bigger */
+    @media screen and (min-width: 481px) {
+        .stone {
+            width: 25rem;
+        }
+
+        .content {
+            width: 25rem;
+        }
+
+        nav {
+            margin-top: 15rem;
+        }
+    }
+
+    /* Desktop sized screens */
+    @media screen and (min-width: 1025px) {
+        nav {
+            margin-top: 10rem;
+        }
     }
 
 </style>
