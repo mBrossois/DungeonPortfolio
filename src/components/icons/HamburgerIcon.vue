@@ -5,11 +5,6 @@
             <rect y="20.6316" width="46" height="13.7544" rx="2" fill="#60584C"/>
             <rect y="43.2281" width="46" height="13.7544" rx="2" fill="#60584C"/>
         </g>
-        <defs>
-            <clipPath id="clip0_43_77">
-                <rect width="46" height="56.9825" fill="white"/>
-            </clipPath>
-        </defs>
     </svg>
 
 </template>
@@ -27,7 +22,7 @@ defineProps({
 
     rect {
         transition: fill 200ms ease-in, transform 200ms ease-in;
-        fill: #60584C;
+        fill: var(--nav-foreground);
         transform-box: fill-box;
         transform-origin: center;
     }

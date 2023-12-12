@@ -41,7 +41,7 @@ function onClick() {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-1);
+  background-color: var(--nav-foreground);
   -webkit-transition: transform .4s;
   transition: transform .4s;
   border-radius: 2px;
@@ -54,7 +54,7 @@ function onClick() {
   width: 1.5rem;
   left: -.4rem;
   bottom: -.25rem;
-  background-color: var(--color-2);
+  background-color: var(--menu-foreground);
   -webkit-transition: transform .4s;
   transition: transform .4s;
   border-radius: 2px;

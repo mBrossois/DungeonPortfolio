@@ -10,7 +10,7 @@
         width: 8.125rem;
         height: 8.125rem;
 
-        background-color: #D9D9D9;
+        background-color: var(--nav-background-color);
         padding: .5rem;
         padding-bottom: .28rem;
         border: none;
