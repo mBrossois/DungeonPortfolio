@@ -1,6 +1,5 @@
 <template>
     <label tabindex="0" class="switch">
-        {{ isChecked }}
         <input :class="{'isChecked': isChecked}" type="checkbox">
         <span class="slider" @click="onClick"></span>
     </label>
