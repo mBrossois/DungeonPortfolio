@@ -11,9 +11,19 @@ import Home from './pages/Home.vue';
 import { useGeneralStore } from './store';
 import { storeToRefs } from 'pinia'
 
+import { getCookie, checkCookie } from './utils';
+
 const store = useGeneralStore()
 
 const { getisDarkMode, getIsAccessible } = storeToRefs(store)
+
+if(checkCookie('darkmode')) {
+  store.toggleIsDarkMode()
+}
+if(checkCookie('accessible')) {
+  store.toggleIsAccessible()
+}
+
 </script>
 
 

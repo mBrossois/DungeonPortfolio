@@ -38,6 +38,8 @@ import { useGeneralStore } from '../store/index'
 import { nextTick, ref } from 'vue';
 
 import { storeToRefs } from 'pinia';
+
+import { setCookie, deleteCookie } from '../utils/index'
     
 const props = defineProps({
     isMenuOpen: Boolean
@@ -53,10 +55,21 @@ const contactMe = ref()
 
 function toggleDarkMode() {
     store.toggleIsDarkMode();
+    if(getisDarkMode.value === true) {
+        setCookie('darkmode', true, 30)
+    } else {
+        deleteCookie('darkmode')
+    }
 }
 
 function toggleAccessibilityMode() {
     store.toggleIsAccessible();
+    if(getIsAccessible.value === true) {
+        setCookie('accessible', true, 30)
+
+    } else {
+        deleteCookie('accessible')
+    }
 }
 
 
