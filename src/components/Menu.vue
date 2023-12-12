@@ -83,7 +83,7 @@ nextTick(() => {
 
 <style scoped>
     .container {
-        height: 100dvh;
+        min-height: calc(100svh - 7rem);
         position: absolute;
         visibility: hidden;
         right: 0;
@@ -152,13 +152,12 @@ nextTick(() => {
         position: fixed;
         bottom: calc(5vh * var(--item));
         transform: translateX(100vw);
-        transition: transform 200ms ease-in ;
-        transition-delay: calc( (20 - var(--item)) * 100ms) ;
+        transition: transform 200ms ease-in calc( (20 - var(--item)) * 100ms) , background-color 350ms ease-in-out ;
     }
 
     .container.open .background .stone {
         transform: translateX(0);
-        transition-delay: calc( var(--item) * 100ms) ;
+        transition: transform 200ms ease-in calc( var(--item) * 100ms) , background-color 350ms ease-in-out ;
 
     }
 

@@ -6,23 +6,30 @@
 .light-mode {
   --background-color: #FFFFFF;
   --nav-background-color: #D9D9D9;
+  --nav-foreground: #60584C;
   --text-color: #000000;
-  --color-1: #60584C;
-  --color-2: #A4633E;
+  --menu-foreground: #A4633E;
   --menu-background: #FFE8CE;
+  --stroke-color: unset;
+
+  transition: stroke 350ms ease-in-out;
+
 }
 
 .dark-mode {
-  --background-color: #FFFFFF;
-  --nav-background-color: #000;
+  --background-color: #000;
+  --nav-background-color: #60584C;
+  --nav-foreground: #FFD057;
   --text-color: #fff;
-  --color-1: #60584C;
-  --color-2: #A4633E;
-  --menu-background: #FFE8CE;
+  --menu-foreground: #FFE8CE;
+  --menu-background: #A4633E;
+  --stroke-color: var(--text-color);
+
+  transition: stroke 350ms ease-in-out;
 }
 
 * {
-  transition: color 350ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 350ms ease-in-out, background-color 350ms ease-in-out;
 
 }
 
@@ -56,10 +63,27 @@ h2 {
   max-width: 1782px;  
   padding: 3rem 1rem;
   margin: 0 auto;
+  background-color: var(--background-color);
+  min-height: calc(100svh - 7rem)
 }
 
 h1, h2, p, span, button {
-  color: --text-color;
+  color: var(--text-color);
+}
+
+.menu-icon {
+  fill: var(--menu-foreground);
+  transition: fill 350ms ease-in-out;
+}
+
+.menu-icon-stroke {
+  stroke: var(--menu-foreground);
+  transition: stroke 350ms ease-in-out;
+}
+
+.icon-stroke {
+  stroke: var(--stroke-color);
+  transition: stroke 350ms ease-in-out;
 }
 
 /* Styling for js generated span letters */

@@ -31,11 +31,6 @@
             </g>
             <path d="M30.1782 -10C30.1782 -10 23.3201 33.8489 42.8201 53.3489C62.3201 72.8489 105.178 67 105.178 67" stroke="#7D5C29" stroke-width="4"/>
         </g>
-        <defs>
-            <clipPath id="clip0_34_332">
-                <rect width="106" height="105" fill="white"/>
-            </clipPath>
-        </defs>
     </svg>
 
 </template>
