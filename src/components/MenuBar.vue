@@ -1,6 +1,6 @@
 <template>
     <header>
-        <router-link to="/" ref="projects" class="logo container" @click="closeMenu">
+        <router-link to="/" ref="projects" class="logo container" tabindex="0" @click="closeMenu">
             <LogoPortfolio />
 
             <p id="logo-text">Dungeon portfolio</p>

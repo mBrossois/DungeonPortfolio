@@ -17,19 +17,19 @@
 
         <h1>Explore the dungeons</h1>
         <div class="buttons grid">
-            <Button>
+            <Button go-to="/projects">
                 <template #title><span> Projects </span></template>
                 <template #icon> <ProjectIcon /> </template>
             </Button>
-            <Button>
+            <Button go-to="/skill-set">
                 <template #title><span> Skill set </span></template>
                 <template #icon> <SkillSetIcon /> </template>
             </Button>
-            <Button>
+            <Button go-to="/about-me">
                 <template #title><span> About me </span></template>
                 <template #icon> <MeIcon /> </template>
             </Button>
-            <Button>
+            <Button go-to="/contact-me">
                 <template #title><span> Contact me </span></template>
                 <template #icon> <ContactMeIcon /> </template>
             </Button>

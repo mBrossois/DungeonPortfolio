@@ -15,10 +15,10 @@
             </div>
 
             <nav>
-                <router-link to="/projects" @click="onMenuItemClick"><div ref="projects">Projects</div></router-link>
-                <router-link to="/skill-set" @click="onMenuItemClick"><div ref="skillSet">Skill set</div></router-link>
-                <router-link to="/about-me" @click="onMenuItemClick"><div ref="aboutMe">About me</div></router-link>
-                <router-link to="/contact-me" @click="onMenuItemClick"><div ref="contactMe">Contact me</div></router-link>
+                <router-link tabindex="0" to="/projects" @click="onMenuItemClick"><div ref="projects">Projects</div></router-link>
+                <router-link tabindex="0" to="/skill-set" @click="onMenuItemClick"><div ref="skillSet">Skill set</div></router-link>
+                <router-link tabindex="0" to="/about-me" @click="onMenuItemClick"><div ref="aboutMe">About me</div></router-link>
+                <router-link tabindex="0" to="/contact-me" @click="onMenuItemClick"><div ref="contactMe">Contact me</div></router-link>
             </nav>
         </div>
         <div class="background">
