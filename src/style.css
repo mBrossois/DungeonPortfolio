@@ -98,6 +98,10 @@ h1, h2, p, span, button {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 .menu-icon {
   fill: var(--menu-foreground);
   transition: fill 350ms ease-in-out;
@@ -120,7 +124,7 @@ h1, h2, p, span, button {
   opacity: 0;
 }
 
-.container.open .content nav button > span.letter {
+.container.open .content nav a div > span.letter {
     opacity: 1;
     transition-delay: calc(var(--letter-delay) * 50ms + 1500ms);
 }

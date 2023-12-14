@@ -1,17 +1,17 @@
 <template>
     <header>
-        <div tabindex="0" class="logo container">
+        <router-link to="/" ref="projects" class="logo container" @click="closeMenu">
             <LogoPortfolio />
 
             <p id="logo-text">Dungeon portfolio</p>
-        </div>
+        </router-link>
 
         <HamburgerIcon :isMenuOpen="isMenuOpen" tabindex="0" @click="toggleMenu"/>
     </header>
 
     <LeafsIcon class="leafs icon" />
 
-    <Menu :isMenuOpen="isMenuOpen"></Menu>
+    <Menu :isMenuOpen="isMenuOpen" @onClose="closeMenu"></Menu>
 </template>
 
 <script setup>
@@ -26,6 +26,10 @@ const isMenuOpen = ref(false)
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value
 }
+
+function closeMenu() {
+    isMenuOpen.value = false
+}
 </script>
 
 <style scoped>
@@ -39,6 +43,10 @@ function toggleMenu() {
         justify-content: space-between;
         padding: 0 1rem;
         z-index: 500;
+    }
+
+    a:hover > p {
+        text-decoration: underline;
     }
 
     .logo.container {
