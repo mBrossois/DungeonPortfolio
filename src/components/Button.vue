@@ -1,12 +1,18 @@
 <template>
-    <button tabindex="0">
+    <router-link :to="goTo" abindex="0">
         <slot name="title"></slot>
         <slot name="icon" class="icon"></slot>
-    </button>
+    </router-link>
 </template>
 
+<script setup>
+    defineProps({
+        goTo: String
+    })
+</script>
+
 <style scoped>
-    button {
+    a {
         width: 8.125rem;
         height: 8.125rem;
 
@@ -21,7 +27,7 @@
         align-items: center;
     }
 
-    button:hover {
+    a:hover {
         cursor: pointer;
         outline: 2px solid var(--text-color);
     }
@@ -33,7 +39,7 @@
 
     /* Medium sized screens */
     @media screen and (min-width: 481px) {
-        button {
+        a {
             width: 16.25rem;
             height: 16.25rem;
             padding: 1rem;

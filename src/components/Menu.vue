@@ -15,10 +15,10 @@
             </div>
 
             <nav>
-                <button ref="projects">Projects</button>
-                <button ref="skillSet">Skill set</button>
-                <button ref="aboutMe">About me</button>
-                <button ref="contactMe">Contact me</button>
+                <router-link tabindex="0" to="/projects" @click="onMenuItemClick"><div ref="projects">Projects</div></router-link>
+                <router-link tabindex="0" to="/skill-set" @click="onMenuItemClick"><div ref="skillSet">Skill set</div></router-link>
+                <router-link tabindex="0" to="/about-me" @click="onMenuItemClick"><div ref="aboutMe">About me</div></router-link>
+                <router-link tabindex="0" to="/contact-me" @click="onMenuItemClick"><div ref="contactMe">Contact me</div></router-link>
             </nav>
         </div>
         <div class="background">
@@ -44,6 +44,8 @@ import { setCookie, deleteCookie } from '../utils/index'
 const props = defineProps({
     isMenuOpen: Boolean
 })
+
+const emits = defineEmits(['onClose'])
 
 const store = useGeneralStore()
 const { getIsAccessible, getisDarkMode } = storeToRefs(store);
@@ -72,6 +74,10 @@ function toggleAccessibilityMode() {
     }
 }
 
+function onMenuItemClick() {
+    emits('onClose')
+}
+
 
 function splitToSpan(element) {
     const newWord = element.textContent.split('')
@@ -87,6 +93,8 @@ function splitToSpan(element) {
 }
 
 nextTick(() => {
+    console.log(projects.value)
+
     splitToSpan(projects.value)
     splitToSpan(skillSet.value)
     splitToSpan(aboutMe.value)
@@ -144,14 +152,15 @@ nextTick(() => {
         width: fit-content;
     }
 
-    nav > button {
+    nav > a {
         color: var(--text-color);
         border: none;
         background-color: unset;
         font-size: 36px;
+        text-decoration: none;
     }
 
-    nav > button:hover {
+    nav > a:hover {
         text-decoration: underline;
         cursor: pointer;
     }
