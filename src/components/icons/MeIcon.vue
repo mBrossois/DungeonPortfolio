@@ -17,7 +17,7 @@
     .icon {
         fill: var(--stroke-color);
     }
-    button:hover svg > .right-eye {
+    a:hover svg > .right-eye {
         animation: wink 200ms both 2 alternate;
     }
 

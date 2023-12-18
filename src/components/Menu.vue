@@ -93,8 +93,6 @@ function splitToSpan(element) {
 }
 
 nextTick(() => {
-    console.log(projects.value)
-
     splitToSpan(projects.value)
     splitToSpan(skillSet.value)
     splitToSpan(aboutMe.value)

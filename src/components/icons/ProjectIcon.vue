@@ -24,7 +24,7 @@
         transform: rotate(0deg);
     }
 
-    button:hover svg > .clank {
+    a:hover svg > .clank {
         animation: rotation 2s ease-in-out alternate infinite;
     }
 

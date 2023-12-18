@@ -25,12 +25,12 @@
         transition: transform 200ms ease-in-out;
     }
 
-    button:hover svg g > .wrench {
+    a:hover svg g > .wrench {
         transform: rotate(10deg);
 
     }
 
-    button:hover svg g > .pencil {
+    a:hover svg g > .pencil {
         transform: rotate(-10deg);
 
     }
