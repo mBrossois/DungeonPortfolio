@@ -68,7 +68,7 @@ import ContactMeIcon from '../components/icons/ContactMeIcon.vue'
         gap: 1rem;
     }
 
-    button > span {
+    a > span {
         color: var(--text-color);
     }
 
@@ -78,11 +78,11 @@ import ContactMeIcon from '../components/icons/ContactMeIcon.vue'
             grid-template-columns: repeat(auto-fill, 16.25rem);
         }
 
-        button > span {
+        a > span {
             font-size: 20px;
         }
 
-        button > svg {
+        a > svg {
             height: 180px;
             width: 180px;
         }

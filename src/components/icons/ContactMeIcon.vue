@@ -22,7 +22,7 @@
 
     }
 
-    button:hover svg g > .envelope-top {
+    a:hover svg g > .envelope-top {
         transform: rotateX(180deg) translateY(-2px);
     }
 </style>
