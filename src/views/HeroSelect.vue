@@ -1,11 +1,9 @@
 <template>
     <div class="page">
-        <h1>Unlock {{store.getActiveDungeon}}</h1>
+        <h1>Unlock {{activeDungeon}}</h1>
     </div>
 </template>
 
 <script setup>
-import { useGeneralStore } from '../store';
-
-const store = useGeneralStore()
+const activeDungeon = localStorage.getItem('activeDungeon')
 </script>
