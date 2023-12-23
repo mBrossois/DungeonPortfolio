@@ -1,5 +1,5 @@
 <template>
-  <div :class="[ getisDarkMode ? 'dark-mode' : 'light-mode', getIsAccessible ? 'accessible-mode' : 'real-mode' ]">
+  <div class="app" :class="[ getisDarkMode ? 'dark-mode' : 'light-mode', getIsAccessible ? 'accessible-mode' : 'real-mode' ]">
     <MenuBar></MenuBar>
     <router-view></router-view>
   </div>
@@ -26,6 +26,6 @@ if(checkCookie('accessible')) {
 </script>
 
 
-<style scoped>
+<style>
 
 </style>

@@ -16,5 +16,10 @@ export const useGeneralStore = defineStore('generalStore', () => {
         isDarkMode.value = !getisDarkMode.value
     }
   
-    return { getIsAccessible, getisDarkMode, toggleIsAccessible, toggleIsDarkMode}
+    return { 
+        getIsAccessible, 
+        getisDarkMode, 
+        toggleIsAccessible,
+        toggleIsDarkMode, 
+    }
   })

@@ -2,7 +2,7 @@ export function setCookie(cookieName, cookieValue, expireInDays) {
     const date = new Date()
     date.setTime(date.getTime() + (expireInDays*24*60*60*1000))
     let expires = "expires="+ date.toUTCString()
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires
+    document.cookie = `${cookieName}=${cookieValue};${expires};`
 }
 
 export function getCookie(cookieName) {
@@ -28,7 +28,7 @@ export function checkCookie(cookieName) {
 
 export function deleteCookie(cookieName) {
     if(checkCookie(cookieName)) {
-        document.cookie = cookieName + "=" + "; expires=Thu, 01 Jan 1970 00:00:00 UTC" 
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC`
 
     }
 }
